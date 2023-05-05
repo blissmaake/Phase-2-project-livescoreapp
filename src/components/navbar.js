@@ -1,8 +1,8 @@
 import React from "react"
 
-export default function NavBar() {
+export default function NavBar(props) {
   return (
-    <div className="navbar bg-base-100 sticky top-0" data-theme="dark">
+    <div className="navbar bg-base-100" data-theme="dark">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -23,16 +23,22 @@ export default function NavBar() {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 z-100"
           >
             <li>
-              <a>Fixtures</a>
+              <a href="/epl">EPL</a>
             </li>
             <li tabIndex={0}>
-              <a className="justify-between">Results</a>
+              <a href="/laliga">La Liga</a>
             </li>
             <li>
-              <a>Odds</a>
+              <a href="/seriea">Serie A</a>
+            </li>
+            <li>
+              <a href="/ligue">Ligue 1</a>
+            </li>
+            <li>
+              <a href="/bundesliga">BundesLiga</a>
             </li>
           </ul>
         </div>
@@ -43,18 +49,26 @@ export default function NavBar() {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a>Fixtures</a>
+            <a href="/epl">EPL</a>
           </li>
           <li tabIndex={0}>
-            <a>Results</a>
+            <a href="/laliga">La Liga</a>
           </li>
           <li>
-            <a>Odds</a>
+            <a href="/seriea">Serie A</a>
+          </li>
+          <li>
+            <a href="/ligue">Ligue 1</a>
+          </li>
+          <li>
+            <a href="/bundesliga">BundesLiga</a>
           </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">LOGIN</a>
+        <label htmlFor="my-modal-3" className="btn" onClick={props.onOpen}>
+          ABOUT
+        </label>
       </div>
     </div>
   )
