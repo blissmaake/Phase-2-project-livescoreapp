@@ -18,13 +18,13 @@ export default function Tabletr({ fixture }) {
               <img src={fixture.teams.home.logo} width={30} alt="logo" />
             </div>
 
-            <div className="w-[30%] text-right">{fixture.teams.home.name}</div>
+            <div className="w-[32%] text-right">{fixture.teams.home.name}</div>
 
             <div className="w-[16%] text-center">
               {fixture.goals.home} : {fixture.goals.away}
             </div>
 
-            <div className="w-[30%] text-left flex">
+            <div className="w-[32%] text-left flex">
               {fixture.teams.away.name}
             </div>
 
