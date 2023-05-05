@@ -8,7 +8,7 @@ export const fetchFixtures = async () => {
   }
 
   const result = await fetch(
-    "https://api-football-v1.p.rapidapi.com/v3/fixtures?live=all&from=2010-05-01",
+    "https://api-football-v1.p.rapidapi.com/v3/fixtures?live=all",
     options
   )
     .then((response) => response.json())
@@ -19,24 +19,69 @@ export const fetchFixtures = async () => {
 
   return result
 }
-// const url =
-//   "https://heisenbug-la-liga-live-scores-v1.p.rapidapi.com/api/laliga/team?name=Real%20Madrid"
-//   const options = {
-//     method: "GET",
-//     headers: {
-//       "X-RapidAPI-Key": "SIGN-UP-FOR-KEY",
-//       "X-RapidAPI-Host": "heisenbug-la-liga-live-scores-v1.p.rapidapi.com",
-//     },
-//   }
 
-//   const result = await fetch(
-//     "https://heisenbug-la-liga-live-scores-v1.p.rapidapi.com/api/laliga/team?name=Real%20Madrid"
-//   )
-//     .then((response) => response.json())
-//     .then((response) => {
-//       return response
-//     })
-//     .catch((err) => console.error(err))
+export const fetchStandings = async (leagueID) => {
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "8b0a905d65msh006cf8356da27ecp14532bjsn91a76b81e7b2",
+      "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com",
+    },
+  }
 
-//   return result
-// }
+  const result = await fetch(
+    `https://api-football-v1.p.rapidapi.com/v3/standings?season=2022&league=${leagueID}`,
+    options
+  )
+    .then((response) => response.json())
+    .then((response) => {
+      return response
+    })
+    .catch((err) => console.error(err))
+
+  return result
+}
+
+export const fetchTesting = async (leagueID) => {
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "8b0a905d65msh006cf8356da27ecp14532bjsn91a76b81e7b2",
+      "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com",
+    },
+  }
+
+  const result = await fetch(
+    `https://api-football-v1.p.rapidapi.com/v3/leagues`,
+    options
+  )
+    .then((response) => response.json())
+    .then((response) => {
+      return response
+    })
+    .catch((err) => console.error(err))
+
+  return result
+}
+
+export const fetchTeam = async (teamID) => {
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "8b0a905d65msh006cf8356da27ecp14532bjsn91a76b81e7b2",
+      "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com",
+    },
+  }
+
+  const result = await fetch(
+    `https://api-football-v1.p.rapidapi.com/v3/teams?id=${teamID}`,
+    options
+  )
+    .then((response) => response.json())
+    .then((response) => {
+      return response
+    })
+    .catch((err) => console.error(err))
+
+  return result
+}
