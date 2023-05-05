@@ -68,7 +68,7 @@ export const fetchTeam = async (teamID) => {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "8b0a905d65msh006cf8356da27ecp14532bjsn91a76b81e7b2",
+      "X-RapidAPI-Key": "8b0a905d65msh006cf8356da27ecp14532bjsn91a76b81e7b",
       "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com",
     },
   }
