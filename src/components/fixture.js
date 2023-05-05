@@ -18,8 +18,6 @@ export default function Fixture() {
       return match.fixture.id == matchID
     })
 
-    console.log(france)
-
     setMatch(france)
   }
 
