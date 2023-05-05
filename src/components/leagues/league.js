@@ -4,7 +4,7 @@ import Tabletr from "../tabletr"
 export default function League({ fixture }) {
   return (
     <div>
-      <div className="p-2 text-white bg-gray-700">{fixture[0].league.name}</div>
+      <div className="p-2 text-white bg-gray-750">{fixture[0].league.name}</div>
       {fixture.map((fixture) => (
         <Tabletr fixture={fixture} />
       ))}
