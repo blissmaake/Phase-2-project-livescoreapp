@@ -36,7 +36,7 @@ export default function FixtureItem({ fixture }) {
       </div>
 
       <div align="center" className="grid grid-cols-1 divide-y">
-        <h1 className=" bg-gray-700 p-1 text-gray-300 text-xl">Events</h1>
+        <h1 className=" bg-gray-720 p-1 text-gray-300 text-xl">Events</h1>
 
         {!fixture.events
           ? null
